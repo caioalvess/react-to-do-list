@@ -4,12 +4,20 @@ export class ToDoList extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      tarefa: [],
+      tarefa: "",
+      items: [],
     };
     this.addItem = this.addItem.bind(this);
   }
 
   addItem(e) {
+    let state = this.state;
+    if (this._tarefaInput.value !== "") {
+      let newItem = {
+        text: this._tarefaInput.value,
+        key: Date.now(),
+      };
+    }
     e.preventDefault();
   }
 
