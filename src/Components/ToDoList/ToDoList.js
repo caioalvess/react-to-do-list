@@ -8,6 +8,7 @@ export class ToDoList extends Component {
       items: [],
     };
     this.addItem = this.addItem.bind(this);
+    this.log = this.log.bind(this);
   }
 
   addItem(e) {
@@ -17,8 +18,14 @@ export class ToDoList extends Component {
         text: this._tarefaInput.value,
         key: Date.now(),
       };
+      this.setState({ items: [...state.items, newItem] });
     }
     e.preventDefault();
+    this.setState({ tarefa: "" });
+  }
+
+  log() {
+    console.log(this.state.items);
   }
 
   render() {
@@ -33,6 +40,7 @@ export class ToDoList extends Component {
           ref={(e) => (this._tarefaInput = e)}
         />
         <button type="submit">Adicionar</button>
+        <button onClick={this.log}>LOG</button>
       </form>
     );
   }
