@@ -9,6 +9,7 @@ export class ToDoList extends Component {
       items: [],
     };
     this.addItem = this.addItem.bind(this);
+    this.deleteItem = this.deleteItem.bind(this);
   }
 
   addItem(e) {
@@ -22,6 +23,13 @@ export class ToDoList extends Component {
     }
     e.preventDefault();
     this.setState({ tarefa: "" });
+  }
+
+  deleteItem(key) {
+    let filtro = this.state.items.filter((item) => {
+      return item.key !== key;
+    });
+    this.setState({ items: filtro });
   }
 
   render() {
@@ -38,7 +46,7 @@ export class ToDoList extends Component {
           />
           <button type="submit">Adicionar</button>
         </form>
-        <ToDoItems lista={this.state.items} />
+        <ToDoItems lista={this.state.items} delete={this.deleteItem} />
       </React.Fragment>
     );
   }
