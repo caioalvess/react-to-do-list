@@ -1,3 +1,13 @@
+# To Do List
+
+Este é um prjeto desenvolvido em React JS que se trata de uma lista de tarefas, onde é possível adicionar tarefas ou remover as mesmas.
+
+Projeto desenvolvido com o objetivo de aprender e praticar conceitos de React JS, como: Estados, propriedades, rest/spread, e prototypes.
+
+<p align="center">
+  <img src="/src/assets/to-do-list.PNG" width="100%">
+</p>
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
