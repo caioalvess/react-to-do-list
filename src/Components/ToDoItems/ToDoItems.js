@@ -16,9 +16,14 @@ export class ToDoItems extends Component {
         <ul>
           {this.props.lista.map((item) => {
             return (
-              <li key={item.key}>
+              <li className="items" key={item.key}>
                 {item.text}
-                <button onClick={() => this.delete(item.key)}>X</button>
+                <button
+                  className="buttonDelete"
+                  onClick={() => this.delete(item.key)}
+                >
+                  X
+                </button>
               </li>
             );
           })}

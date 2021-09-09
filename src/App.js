@@ -7,7 +7,7 @@ export class App extends Component {
   render() {
     return (
       <div className="container">
-        <h1>Lista de Tarefas</h1>
+        <h1 style={{ color: "#005eff" }}>Lista de Tarefas</h1>
         <ToDoList />
         <Footer />
       </div>

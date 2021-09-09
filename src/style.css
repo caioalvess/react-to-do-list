@@ -4,7 +4,53 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: flex-start;
   padding-top: 50px;
+}
+
+.input {
+  padding: 11px 20px;
+  font-size: 15px;
+  border: 1px solid #005eff;
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+}
+
+.items {
+  list-style: none;
+  font-size: 20px;
+  padding: 5px;
+}
+
+.buttonDelete {
+  padding: 5px 10px;
+  font-size: 20px;
+  color: #fff;
+  border: none;
+  background-color: #005eff;
+  border-radius: 5px;
+  margin-left: 20px;
+}
+
+.buttonDelete:hover {
+  background-color: #0088ff;
+  cursor: pointer;
+}
+
+.buttonAdd {
+  padding: 12px 10px;
+  font-size: 15px;
+  color: #fff;
+  background-color: #005eff;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.buttonAdd:hover {
+  background-color: #0088ff;
 }
 
 .footer {

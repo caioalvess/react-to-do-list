@@ -37,6 +37,7 @@ export class ToDoList extends Component {
       <React.Fragment>
         <form onSubmit={this.addItem}>
           <input
+            className="input"
             type="text"
             placeholder="Nova Tarefa"
             name="tarefa"
@@ -44,7 +45,9 @@ export class ToDoList extends Component {
             onChange={(e) => this.setState({ tarefa: e.target.value })}
             ref={(e) => (this._tarefaInput = e)}
           />
-          <button type="submit">Adicionar</button>
+          <button className="buttonAdd" type="submit">
+            Adicionar
+          </button>
         </form>
         <ToDoItems lista={this.state.items} delete={this.deleteItem} />
       </React.Fragment>
